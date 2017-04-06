@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=640,user-scalable=no" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<style>
+			#main{
+				width:640px;
+				height:960px;
+				
+			}
+			/*音乐图标*/
+			
+			.music {
+				width: 90px;
+				height: 90px;
+				background: url(img/music.png);
+				background-size: cover;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				z-index: 7;
+			}
+			
+			.music.active {
+				animation: 2s musicMove linear infinite;
+			}
+			
+			@keyframes musicMove {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="music">
+				<audio src="img/music.mp3" loop="loop">
+				</audio>
+			</div>
+		</div>
+		
+		<script>
+					showMusic();
+			//控制音乐的起停
+				function showMusic() {
+					var oMusic = $('.music');
+					var oA = $('audio');
+
+					var obtn = false;
+
+					oMusic.on('click', function() {
+
+						if(!obtn) {
+							//播放
+							oA.get(0).play();
+							oMusic.addClass('active'); //旋转动画
+						} else {
+							oA.get(0).pause();
+							oMusic.removeClass('active'); //旋转动画
+						}
+
+						obtn = !obtn;
+					})
+					//主动触发
+					oMusic.trigger('click');
+
+				}
+		</script>
+	</body>
+</html>

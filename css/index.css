@@ -1,0 +1,394 @@
+html,body,ul,li,h1,h2,h3,p,form{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+#main{
+	width:640px;
+	height:960px;
+	position:relative;
+	overflow: hidden;
+}
+/*技能加载*/
+.loading{
+	width:100%;
+	height:100%;
+	background:white;
+	
+	color:darkgreen;
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:30px;
+	z-index:88;
+}
+.loading ul{
+	position:absolute;
+	left:40%;
+	top:40%;
+	
+}
+.loading li{
+	width:5px;
+	height:50px;
+	background:darkgreen;
+	float:left;
+	margin-left:10px;
+	animation:2s liMove linear infinite;
+}
+.loading div {
+				position: absolute;
+				top: 50%;
+				left: 20%;
+			}
+@keyframes liMove {
+				0% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(0.2);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}			
+.loading ul>li:nth-child(1) {
+				animation-delay: 0s;
+			}
+			
+			.loading ul>li:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+			
+			.loading ul>li:nth-child(3) {
+				animation-delay: 0.4s;
+			}
+			
+			.loading ul>li:nth-child(4) {
+				animation-delay: 0.6s;
+			}
+			
+			.loading ul>li:nth-child(5) {
+				animation-delay: 0.8s;
+			}
+			
+			.loading ul>li:nth-child(6) {
+				animation-delay: 1s;
+			}			
+			
+			
+			
+			
+			
+/*音乐*/
+#music{
+	width:100px;
+	height:100px;
+	background: url(../img/music.png);
+	background-size:cover;
+	position:absolute;
+	right:20px;
+	top:20px;
+	z-index:7;
+}
+  .rotate {
+    
+     animation: rotating 1.2s linear infinite
+ }
+
+ @keyframes rotating {
+     from { transform: rotate(0) }
+    to { transform: rotate(360deg) }
+ }
+
+/*箭头*/
+@keyframes myfirst
+{
+    from {bottom: 0px;}
+    to {bottom: 40px;}
+}
+#arrows{
+	width:100%;
+	position:fixed;
+	bottom:10px;
+	z-index: 55;
+	text-align: center;
+   	animation-name:myfirst;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:1s;
+	animation-iteration-count:infinite;
+	animation-direction:normal;
+	animation-play-state:running;
+}
+#arrows img{
+	display: inline-block;
+}
+#list{
+	position:relative;
+	
+}
+#list>li {
+				width: 100%;
+				height: 960px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-repeat: no-repeat;
+				background-size: cover;
+				-webkit-background-size: cover;
+				display: none;
+				z-index: 5;
+			}
+#list>li:nth-child(1){
+	background-image:url(../img/b.png);
+	display:block;
+	
+}
+#list>li:nth-child(2){
+	background-image:url(../img/c.png);
+	
+}
+/*发散*/
+.animation1 {
+				 -webkit-animation:img1 2s linear;
+			}
+@-webkit-keyframes img1{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(270px) translateX(0) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+@-webkit-keyframes img2{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(180px) translateX(130px) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+			@-webkit-keyframes img3{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(180px) translateX(-130px) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+			@-webkit-keyframes img4{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(-180px) translateX(130px) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+			@-webkit-keyframes img5{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(-180px) translateX(-130px) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+			@-webkit-keyframes img6{
+				0% {
+					opacity: 0;
+					
+					-webkit-transform: translateY(-270px) translateX(0) rotate(0deg);
+				}
+				100% {
+					opacity: 1;
+					-webkit-transform:translateY(0) translateX(0) rotate(360deg);
+				}
+			}
+.c1{
+	position:absolute;
+	left:275px;
+	top:300px;
+	-webkit-animation:img1 2s linear;
+}
+.c2{
+	position:absolute;
+	left:90px;
+	top:450px;
+	-webkit-animation:img2 2s linear;
+}
+.c3{
+	position:absolute;
+	right:90px;
+	top:450px;
+	-webkit-animation:img3 2s linear;
+}
+.c4{
+	position:absolute;
+	left:90px;
+	top:720px;
+	-webkit-animation:img4 2s linear;
+}
+.c5{
+	position:absolute;
+	right:90px;
+	top:720px;
+	-webkit-animation:img5 2s linear;
+}
+.c6{
+	position:absolute;
+	left:275px;
+	top:850px;
+	-webkit-animation:img6 2s linear;
+}
+
+/*翻转*/
+#list>li:nth-child(3){
+	background-image:url(../img/d.png);
+	
+}
+@keyframes fanzhuan
+{
+    from {transform: rotateY(0);}
+    to {transform: rotateY(180deg)}
+}
+
+#list>li:nth-child(3) .fanzhuan{
+	position:absolute;
+	left:90px;
+	bottom:200px;
+	animation-name: fanzhuan;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+/*伸缩*/
+#list>li:nth-child(4){
+	background-image:url(../img/e.png);
+	
+}
+
+@keyframes bianda1
+{
+    from {
+    	width: 0;
+    	height:0;
+    	opacity: 0;
+    	font-size:0px;
+    }
+    to {
+    	width:200px;
+    	height:100px;
+    	opacity: 1;
+    	font-size:24px;
+    }
+}
+ @keyframes bianda2
+{
+    from {
+    	width: 0;
+    	height:0;
+    	opacity: 0;
+    	font-size:0px;
+    }
+    to {
+    	width:200px;
+    	height:100px;
+    	opacity: 1;
+    	font-size:24px;
+    }
+}
+@keyframes bianda3
+{
+    from {
+    	width: 0;
+    	height:0;
+    	opacity: 0;
+    	font-size:0px;
+    }
+    to {
+    	width:100px;
+    	height:200px;
+    	opacity: 1;
+    	font-size:24px;
+    }
+}
+#list>li:nth-child(4) p{
+	color:white;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size:24px;
+	display: inline-block;
+	
+}
+.text1{
+	width:200px;
+	height:100px;
+	position:absolute;
+	left:90px;
+	top:150px;
+	animation: bianda1 5s;
+}
+.text2{
+	width:200px;
+	height:100px;
+	position:absolute;
+	left:320px;
+	top:200px;
+	animation: bianda2 5s;
+}
+.text3{
+	width:100px;
+	height:200px;
+	position:absolute;
+	left:500px;
+	top:500px;
+	animation: bianda3 5s;
+}
+#list>li:nth-child(5){
+	background-image:url(../img/ad1.png);
+	
+}
+#list>li:nth-child(6){
+	background-image:url(../img/ad2.png);
+}
+/*画布*/
+#huabu{
+	position: absolute;
+	z-index: 100000;
+	
+}
+/*文字描述*/
+#list .desc{
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:160px;
+	color:white;
+	font-size:30px;
+	text-align: center;
+}
+#list .desc li{
+	width:350px;
+	display: inline-block;
+	text-align:left;
+}
